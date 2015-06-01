@@ -12,7 +12,7 @@ var ReaderOutput = React.createClass({
   },
   highlightFeed: function(feedUrl) {
     // find all feed posts and update boolean
-
+    
     this.setState(this.getState());
   },
   componentDidMount: function() {},
