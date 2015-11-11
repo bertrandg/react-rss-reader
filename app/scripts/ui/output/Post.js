@@ -5,7 +5,7 @@ var React = require('react');
 var Post = React.createClass({
   render: function() {
     var divStyle = {
-      color: this.props.content.color
+      backgroundColor: this.props.content.color
     };
 
     var date = new Date(this.props.content.publishedDate);

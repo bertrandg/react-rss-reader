@@ -14,7 +14,8 @@ var ReaderApp = React.createClass({
         { id: 1, url: 'https://blog.nraboy.com/feed/' },
         { id: 2, url: 'http://bertrandg.github.io/feed.xml' },
         { id: 3, url: 'http://feeds.feedburner.com/TEDTalks_video' },
-        { id: 4, url: 'http://feeds.nationalgeographic.com/ng/photography/photo-of-the-day/' }
+        { id: 4, url: 'http://feeds.nationalgeographic.com/ng/photography/photo-of-the-day/' },
+        { id: 5, url: 'http://www.botanicalgarden.ubc.ca/potd/index.xml' }
       ],
       posts: []
     };
@@ -82,7 +83,7 @@ function getEntriesFromFeeds(feeds) {
 
   feeds.forEach(function(feed) {
     var promise = getEntriesFromFeed(feed);
-    var randomColor = "#"+((1<<24)*Math.random()|0).toString(16);
+    var randomColor = 'rgba(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ', .2)';
 
     promise.done(function(response) {
       var feed = response.responseData.feed;
